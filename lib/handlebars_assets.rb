@@ -15,9 +15,6 @@ module HandlebarsAssets
     require 'handlebars_assets/engine'
   else
     require 'sprockets'
-    Sprockets.register_engine '.hbs', TiltHandlebars
-    Sprockets.register_engine '.handlebars', TiltHandlebars
-    Sprockets.register_engine('.hamlbars', TiltHandlebars) if HandlebarsAssets::Config.haml_available?
-    Sprockets.register_engine('.slimbars', TiltHandlebars) if HandlebarsAssets::Config.slim_available?
+    Sprockets.register_engine '.hba', TiltHandlebars
   end
 end
